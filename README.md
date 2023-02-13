@@ -1,20 +1,20 @@
 1. # **Sources**
-   1) Article scientifique :
+1) Article scientifique :
 
 François Kawala, Ahlame Douzal, Eric Gaussier et Eustache Diemert, « Prédictions d’activité dans les réseaux sociaux en ligne », site internet [*https://hal.science/*](https://hal.science/), le 12 novembre 2013, [*https://hal.science/hal-00881395v1/document*](https://hal.science/hal-00881395v1/document) (01/12/2022).
 
-1) Description des données :
+2) Description des données :
 
 « Buzz in social media Data Set », site internet [*https://archive.ics.uci.edu/*](https://archive.ics.uci.edu/) , le 27 mai 2013, [*https://archive.ics.uci.edu/ml/datasets/Buzz+in+social+media*](https://archive.ics.uci.edu/ml/datasets/Buzz+in+social+media)[+#*](https://archive.ics.uci.edu/ml/datasets/Buzz+in+social+media+#)  *(01/12/2022).*
 
-1) Dataset choisi :
+3) Dataset choisi :
 
 « regression.tar.gz/Twitter/Twitter.data » renommé « Twitter-data.csv » dans le notebook(4), téléchargeable depuis site internet [*https://archive.ics.uci.edu/*](https://archive.ics.uci.edu/) , le 27 mai 2013, [*https://archive.ics.uci.edu/ml/machine-learning-databases/00248/*](https://archive.ics.uci.edu/ml/machine-learning-databases/00248/) *(01/12/2022).*
 
-1) Notebook du compte-rendu :
+4) Notebook du compte-rendu :
 
-Balthazar Méhus et Zhoushan Wan, Twitter-analyses.ipynb, le 13 janvier 2023*.*
-1. # **Description du dataset**
+ Twitter-analyses.ipynb, le 13 janvier 2023*.*
+2. # **Description du dataset**
 Notre sujet vise à prédire les potentiels buzz sur les réseaux sociaux. A priori, il s’agit d’un problème de régression.
 
 **Comment ont été choisies les variables de notre dataset ? (1)**
@@ -64,7 +64,7 @@ Remarques a priori :
 
 - D’après l’article (1), 6 attributs, parmi les 11, semblent être des constructions mathématiques intégrant au moins un autre attribut du dataset (nous les avons représenter entre parenthèses dans la liste ci-dessus) ;
 - MNAD est construit mathématiquement par une prédiction Regression Random Forests avec validation croisée répétée cinq fois sur l’ensemble des exemples.
-1. # **Approche suivie**
+3. # **Approche suivie**
 Notre travail suit les étapes listées ci-dessous. Le script est fourni sous forme de notebook (4) :
 
 - Charger les données Twitter-data.csv
@@ -90,7 +90,7 @@ Notre travail suit les étapes listées ci-dessous. Le script est fourni sous fo
 - Optimiser le nombre de feuilles (score ~ 0,9 instable, feuilles = 15) ;
 - Tester le modèle (score ~0,9 % instable) ;
 - **Round 5 : Utiliser la méthode Decision Tree Classifyer** (non abouti).
-1. # **Enseignements**
+4. # **Enseignements**
 - Le dataset n’a pas de données manquantes.
 - Le nombre d’individus est trop grand pour manipuler le dataset aisément durant la phase d’étude, donc nous avons choisi de le réduire à 1 % de son total, soit environ 5 800 individus. C’est sûr ce dataset réduit que nous séparerons données d’entraînement (4000 individus, soit 70%) et données de test (1800 individus, soit 30%).
 - L’outil facet grid permet de se faire une idée de quelques caractéristiques de notre problème. Par exemple, un sujet qui n’a pas beaucoup d’engouement dans les premiers jours n’explosera jamais au bout d’une semaine. Ou encore, les sujets qui ont peu de contributeurs sont bien plus nombreux  que les sujets avec beaucoup de contributeurs.
